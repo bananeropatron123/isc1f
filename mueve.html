@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+<style>
+#cuadro{
+width: 100px;
+height: 100px;
+background-color: blue;
+position: absolute;
+}
+
+    </style>
+</head>
+<body style="background-color: aquamarine;">
+    
+</body> 
+
+
+<body>
+    <h1>JUEGAZO DEL AñO</h1>
+    <a href="index.html">inicio</a><br><br>
+    <div id="cuadro"></div>
+    <input type="button" onclick="mueve(this)" value="izq">
+    <input type="button" onclick="mueve(this)" value="der">
+    <input type="button" onclick="mueve(this)" value="arriba">
+    <input type="button" onclick="mueve(this)" value="abajo">
+
+</body>
+<script>
+onload = function(){
+var cuadro = document.getElementById("cuadro");
+cuadro.style.left = "250px";
+cuadro.style.top ="100px";
+}
+function mueve(obj){
+var cuadro =document.getElementById("cuadro");
+var x = parseInt(cuadro.style.left);
+var y = parseInt(cuadro.style.top);
+
+if(obj.value =="izq"){
+    x-=10;
+
+}
+if(obj.value =="der"){
+    x+=10;
+}
+if(obj.value =="arriba"){
+    y-=10;
+    
+}
+if(obj.value =="abajo"){
+    y+=10;
+    
+}
+cuadro.style.left = x + "px";
+cuadro.style.top = y +"px";
+
+}
+</script>
+</html>

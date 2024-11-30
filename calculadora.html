@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: aquamarine;">
+    
+</body>
+<body>
+    <a href="index.html">inicio</a><br>
+<h1>CALCULADORA</h1>
+    numA <input type="number" name="" id="numA"><br>
+    numB <input type="number" name="" id="numB"><br>
+    <input type="button" onclick="suma();" value="calcula suma "><br>
+    <input type="button" onclick="resta();" value="calcula resta"><br>
+    <input type="button" onclick="multiplicacion();" value="calcula multiplicacion"><br>
+    <input type="button" onclick="division();" value="calcula division"><br>
+    resultado <input type="number" name="" id="resultado">
+</body>
+<script>
+
+function suma(){
+var numA =document.getElementById("numA").value;
+  var numB =document.getElementById("numB").value;
+  var resultado=parseInt(numA)+parseInt(numB);
+  document.getElementById("resultado").value=resultado;
+}
+
+  function multiplicacion(){
+var numA =document.getElementById("numA").value;
+  var numB =document.getElementById("numB").value;
+  var resultado=parseInt(numA)*parseInt(numB);
+  document.getElementById("resultado").value=resultado;
+
+}
+function resta(){
+var numA =document.getElementById("numA").value;
+  var numB =document.getElementById("numB").value;
+  var resultado=parseInt(numA)-parseInt(numB);
+  document.getElementById("resultado").value=resultado;
+
+}
+
+function division(){
+var numA =document.getElementById("numA").value;
+  var numB =document.getElementById("numB").value;
+  var resultado=parseInt(numA)/parseInt(numB);
+  document.getElementById("resultado").value=resultado;
+}
+
+</script>
+</html>
